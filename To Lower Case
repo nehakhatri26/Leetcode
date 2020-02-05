@@ -1,0 +1,18 @@
+Implement function ToLowerCase() that has a string parameter str, and returns the same string in lowercase.
+
+class Solution {
+    public String toLowerCase(String str) {
+        StringBuilder res = new StringBuilder();
+        char l;
+        for(char s: str.toCharArray()){
+            if(s<91 && s>64){
+                l = (char) (s + 32);
+            }
+            else
+                l = s;
+            
+            res.append(l);
+        }
+        return res.toString();
+    }
+}
